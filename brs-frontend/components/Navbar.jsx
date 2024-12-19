@@ -7,16 +7,16 @@ const Navbar = () => {
           <div className="text-white text-lg font-bold">BSR</div>
           <div className="hidden md:flex space-x-4">
             <Link href="/" className="text-white text-lg hover:underline">
-              Home
+              HOME
             </Link>
             <Link href="/Book-A-Ride" className="text-white text-lg  hover:underline">
-              Book A Ride
+              BOOK A RIDE
             </Link>
             <Link href="/about" className="text-white text-lg  hover:underline">
-              About
+              ABOUT
             </Link>
             <Link href="/contact-us" className="text-white text-lg hover:underline">
-              Contact Us
+              CONTACT US
             </Link>
           </div>
         </div>
