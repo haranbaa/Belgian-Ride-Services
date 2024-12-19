@@ -1,6 +1,6 @@
 'use client';
 import Navbar from "../components/Navbar"; 
-import Footer from "../components/Footer"; 
+// import Footer from "../components/Footer"; 
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -21,7 +21,7 @@ const BookingPage = () => {
 
   return (
     <div className="bg-black text-yellow-500 min-h-screen">
-      <Navbar /> {/* Use Navbar */}
+      <Navbar /> 
       <div className="relative w-full h-64">
         <Image
           src="/taxi.jpg" 
@@ -78,7 +78,7 @@ const BookingPage = () => {
         </div>
         <Button type="submit" className="w-full mt-4">Submit</Button>
       </form>
-      <Footer /> 
+      {/* <Footer />  */}
     </div>
   );
 };
