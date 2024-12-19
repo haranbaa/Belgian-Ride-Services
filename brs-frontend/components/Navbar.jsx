@@ -12,7 +12,7 @@ const Navbar = () => {
             <Link href="/booking" className="text-white text-lg  hover:underline">
               BOOK A RIDE
             </Link>
-            <Link href="/about" className="text-white text-lg  hover:underline">
+            <Link href="/#about-us" className="text-white text-lg  hover:underline">
               ABOUT
             </Link>
             <Link href="/contact-us" className="text-white text-lg hover:underline">
