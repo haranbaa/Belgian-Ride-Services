@@ -14,7 +14,7 @@ const Footer = () => {
       
       <div>
         <h3 className="text-white font-semibold">Contact</h3>
-        <a href="mailto:info@tinpet.com" className="block text-sm hover:underline">email@email.com</a>
+        <a href="mailto:info@tinpet.com" className="block text-sm hover:underline hover:text-yellow-500">email@email.com</a>
         <p className="text-sm">(123) 456-7890</p>
       </div>
       
