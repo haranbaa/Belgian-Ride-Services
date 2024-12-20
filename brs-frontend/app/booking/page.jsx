@@ -1,6 +1,6 @@
 'use client';
 import Navbar from '@/components/Navbar';
-// import Footer from "../components/Footer"; 
+import Footer from "@/components/Footer"; 
 import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -95,7 +95,7 @@ const BookingPage = () => {
         </div>
         <Button type="submit" className="w-full mt-4">Submit</Button>
       </form>
-      {/* <Footer />  */}
+      <Footer /> 
     </div>
   );
 };
