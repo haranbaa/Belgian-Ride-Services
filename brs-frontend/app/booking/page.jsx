@@ -35,7 +35,7 @@ const BookingPage = () => {
           objectFit="cover"
         />
       </div>
-      <h1 className="text-center text-4xl font-bold  mt-4">Book Your Trip</h1>
+      <h1 className="text-center text-4xl font-bold text-yellow-500  mt-4">Book Your Trip With Us</h1>
       <form onSubmit={handleSubmit} className="max-w-3xl mx-auto mt-8 p-4 border rounded bg-gray-200 ">
         <div className="mb-4 ">
           <Label htmlFor="name" className="text-black font-bold text-md">Your Name:</Label>
