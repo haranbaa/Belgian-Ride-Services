@@ -25,7 +25,7 @@ const BookingPage = () => {
   };
 
   return (
-    <div className="bg-black text-yellow-500 min-h-screen">
+    <div className="bg-black text-black font-bold  min-h-screen">
       <Navbar /> 
       <div className="relative w-full h-64">
         <Image
@@ -35,44 +35,46 @@ const BookingPage = () => {
           objectFit="cover"
         />
       </div>
-      <h1 className="text-center text-2xl mt-4">Book Your Trip</h1>
-      <form onSubmit={handleSubmit} className="max-w-3xl mx-auto mt-8 p-4 border rounded bg-gray-50">
-        <div className="mb-4">
-          <Label htmlFor="name">Your Name:</Label>
-          <Input type="text" id="name" required />
+      <h1 className="text-center text-4xl font-bold  mt-4">Book Your Trip</h1>
+      <form onSubmit={handleSubmit} className="max-w-3xl mx-auto mt-8 p-4 border rounded bg-gray-200 ">
+        <div className="mb-4 ">
+          <Label htmlFor="name" className="text-black font-bold text-md">Your Name:</Label>
+          <Input type="text" id="name" required  className="bg-gray-50 shadow-sm shadow-gray-600 text-black font-semibold" />
         </div>
         <div className="mb-4">
-          <Label htmlFor="pickup">Pick Up:</Label>
-          <Input type="text" id="pickup" required />
+          <Label htmlFor="pickup"
+          className="text-black font-bold text-md">Pick Up:</Label>
+          <Input type="text" id="pickup" required className="bg-gray-50 shadow-sm shadow-gray-600 text-black font-semibold" />
         </div>
         <div className="mb-4">
-          <Label htmlFor="dropoff">Drop Off:</Label>
-          <Input type="text" id="dropoff" required />
+          <Label htmlFor="dropoff" className="text-black font-bold text-md">Drop Off:</Label>
+          <Input type="text" id="dropoff" required className="bg-gray-50 shadow-sm shadow-gray-600 text-black font-semibold"/>
         </div>
 
         {/* Date Picker Component */}
         <div className="mb-4">
-          <Label htmlFor="date">When:</Label>
-          <DatePicker selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
+          <Label htmlFor="date" className="text-black font-bold text-md">When:</Label>
+          <DatePicker selectedDate={selectedDate} setSelectedDate={setSelectedDate}  />
         </div>
         
         {/* Manual Time Input */}
         <div className="mb-4">
-          <Label htmlFor="time">Time:</Label>
+          <Label htmlFor="time" className="text-black font-bold text-md">Time:</Label>
           <Input 
             type="time" 
             id="time" 
             value={time} 
             onChange={(e) => setTime(e.target.value)} 
             required 
+            className="bg-gray-50 shadow-sm shadow-gray-600  text-black font-bold"
           />
         </div>
 
         <div className="mb-4">
-          <Label htmlFor="carType">Type of Car:</Label>
-          <Select id="carType" required>
-            <SelectTrigger>
-              <SelectValue placeholder="Select type" />
+          <Label htmlFor="carType" className="text-black font-bold text-md">Type of Car:</Label>
+          <Select id="carType" required >
+            <SelectTrigger className="bg-gray-50 shadow-sm shadow-gray-600 font-semibold">
+              <SelectValue placeholder="Select type"  />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="electrical">Electrical</SelectItem>
@@ -82,18 +84,18 @@ const BookingPage = () => {
         </div>
         
         <div className="mb-4">
-          <Label htmlFor="passengers">Passengers:</Label>
-          <Input type="number" id="passengers" min="1" max="5" required />
+          <Label htmlFor="passengers" className="text-black font-bold text-md">Passengers:</Label>
+          <Input type="number" id="passengers" min="1" max="5" required className="bg-gray-50 shadow-sm shadow-gray-600 font-semibold" />
         </div>
         <div className="mb-4">
-          <Label htmlFor="email">Your Email:</Label>
-          <Input type="email" id="email" required />
+          <Label htmlFor="email" className="text-black font-bold text-md">Your Email:</Label>
+          <Input type="email" id="email" required  className="bg-gray-50 shadow-sm shadow-gray-600 font-semibold"/>
         </div>
         <div className="mb-4">
-          <Label htmlFor="phone">Your Phone Number:</Label>
-          <Input type="tel" id="phone" required />
+          <Label htmlFor="phone" className="text-black font-bold text-md">Your Phone Number:</Label>
+          <Input type="tel" id="phone" required  className="bg-gray-50 shadow-sm shadow-gray-600 font-semibold"/>
         </div>
-        <Button type="submit" className="w-full mt-4">Submit</Button>
+        <Button type="submit" className="w-full mt-4  bg-yellow-500 text-black  text-xl font-bold rounded-lg shadow hover:bg-green-600">Submit</Button>
       </form>
       <Footer /> 
     </div>

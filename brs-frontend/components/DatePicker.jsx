@@ -21,7 +21,7 @@ export const DatePicker = ({ selectedDate, setSelectedDate }) => {
           variant={"outline"}
           className={cn(
             "w-full justify-start text-left font-normal",
-            !selectedDate && "text-muted-foreground"
+            !selectedDate && "text-muted-foreground bg-gray-50 shadow-sm shadow-gray-600"
           )}
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
