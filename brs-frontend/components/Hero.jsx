@@ -9,9 +9,11 @@ const Hero = () => {
         <div className="text-center text-white">
             <h1 className="text-6xl font-bold drop-shadow-lg">BELGIAN RIDE SERVICES</h1>
             <p className="mt-4 text-2xl italic drop-shadow-lg">Something related to the company that still need to be filled</p>
+            <Link href="/booking">
             <Button className="mt-6 px-6 py-3 bg-yellow-300 text-black font-bold rounded-lg shadow hover:bg-yellow-500">
           BOOK YOUR RIDE
         </Button>
+        </Link>
       </div>
     </section>
     )
