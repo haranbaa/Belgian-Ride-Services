@@ -18,6 +18,8 @@ import { DatePicker } from '@/components/DatePicker';
 const BookingPage = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [time, setTime] = useState('');
+  const [paymentMethod, setPaymentMethod] = useState('');
+  const [driverNote, setDriverNote] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -82,17 +84,29 @@ const BookingPage = () => {
             </div>
 
             <div>
-              <Label htmlFor="vehicle">Vehicle Type</Label>
-              <Select required>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select vehicle type" />
+              <Label htmlFor="payment">Payment Type</Label>
+              <Select onValueChange={(value) => setPaymentMethod(value)} required>
+                <SelectTrigger className="mt-1">
+                  <SelectValue placeholder="Select Payment Type" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="sedan">Sedan</SelectItem>
-                  <SelectItem value="suv">SUV</SelectItem>
-                  <SelectItem value="van">Van</SelectItem>
+                  <SelectItem value="cash">Cash</SelectItem>
+                  <SelectItem value="apple_pay">Apple Pay</SelectItem>
+                  <SelectItem value="payconiq">Payconiq</SelectItem>
                 </SelectContent>
               </Select>
+            </div>
+
+            <div>
+              <Label htmlFor="driverNote">Note for the Driver</Label>
+              <Input
+                id="driverNote"
+                type="text"
+                placeholder="Enter a note for the driver (e.g., specific instructions)"
+                value={driverNote}
+                onChange={(e) => setDriverNote(e.target.value)}
+                className="mt-1"
+              />
             </div>
 
             <div className="text-center">
