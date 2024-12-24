@@ -2,7 +2,8 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
-import FeaturesSection from "@/components/FeaturesSection"; // Import the FeaturesSection component
+import FeaturesSection from "@/components/FeaturesSection";
+import BusinessSection from "@/components/BusinessSection"; // Import the BusinessSection component
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
       </header>
       <main>
         <Hero />
-        <FeaturesSection /> {/* Add the FeaturesSection component here */}
         <AboutUs />
+        <FeaturesSection />
+        <BusinessSection /> {/* Add the BusinessSection component here */}
         <Footer />
       </main>
     </>
