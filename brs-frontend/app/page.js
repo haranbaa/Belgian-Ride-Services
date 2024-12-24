@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
 import FeaturesSection from "@/components/FeaturesSection";
 import BusinessSection from "@/components/BusinessSection"; // Import the BusinessSection component
+import EcoFriendlyFleet from "@/components/EcoFriendlyFleet";
 
 export default function Home() {
   return (
@@ -13,9 +14,9 @@ export default function Home() {
       </header>
       <main>
         <Hero />
-        <AboutUs />
         <FeaturesSection />
         <BusinessSection /> {/* Add the BusinessSection component here */}
+        <EcoFriendlyFleet />
         <Footer />
       </main>
     </>
