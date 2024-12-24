@@ -1,44 +1,30 @@
 "use client";
 
-import { Button } from "./ui/button";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { ArrowRight } from 'lucide-react';
+import { Button } from "./ui/button";
 
 const Hero = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <section
-      className="relative h-screen bg-cover bg-center"
+      className="relative h-screen bg-cover bg-center flex items-center justify-center"
       style={{
         backgroundImage: `url('/Hero3.jpg')`,
       }}
     >
-      <div
-        className={`sticky top-0 text-center text-white p-6 transition-all duration-300 ${
-          scrollY > 200 ? "opacity-75 transform scale-95" : "opacity-100"
-        }`}
-      >
-        <h1 className="text-6xl font-bold drop-shadow-lg mb-4">
-          BELGIAN RIDE SERVICES
+      <div className="absolute inset-0 bg-black opacity-50" />
+      <div className="relative z-10 text-center text-white p-6">
+        <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+          BELGIAN RIDE{" "}
+          <span className="text-yellow-400 drop-shadow-lg">SERVICES</span>
         </h1>
-        <p className="text-2xl italic drop-shadow-lg mb-6">
-          Professional and Reliable Transportation Services
+        <p className="text-xl md:text-2xl italic mb-10 max-w-2xl mx-auto">
+          Professional and Reliable Transportation Services for Every Journey
         </p>
         <Link href="/booking">
-          <Button className="px-16 py-4 bg-yellow-300 text-black text-xl font-bold rounded-lg shadow-lg hover:bg-yellow-500">
+          <Button className="px-8 py-4 bg-yellow-500 text-gray-900 text-lg font-bold rounded-full shadow-xl hover:bg-yellow-400 transition-all duration-300 group">
             BOOK YOUR RIDE
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
         </Link>
       </div>
@@ -47,3 +33,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
