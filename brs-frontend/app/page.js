@@ -15,7 +15,6 @@ export default function Home() {
       </header>
       <main>
         <Hero />
-        <AboutUs />
         <FeaturesSection />
         <BusinessSection />
         <CourierServiceSection /> {/* Add the CourierServiceSection component */}
