@@ -15,12 +15,13 @@ export default function Home() {
       </header>
       <main>
         <Hero />
+        <AboutUs />
         <FeaturesSection />
         <BusinessSection />
+        <CourierServiceSection /> {/* Add the CourierServiceSection component */}
         <EcoFriendlyFleet />
-        <CourierServiceSection /> {/* Add the CourierServiceSection component here */}
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }
