@@ -3,8 +3,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
 import FeaturesSection from "@/components/FeaturesSection";
-import BusinessSection from "@/components/BusinessSection"; // Import the BusinessSection component
+import BusinessSection from "@/components/BusinessSection";
 import EcoFriendlyFleet from "@/components/EcoFriendlyFleet";
+import CourierServiceSection from "@/components/CourierServiceSection"; // Import the CourierServiceSection component
 
 export default function Home() {
   return (
@@ -15,8 +16,9 @@ export default function Home() {
       <main>
         <Hero />
         <FeaturesSection />
-        <BusinessSection /> {/* Add the BusinessSection component here */}
+        <BusinessSection />
         <EcoFriendlyFleet />
+        <CourierServiceSection /> {/* Add the CourierServiceSection component here */}
         <Footer />
       </main>
     </>
