@@ -46,7 +46,7 @@ const Footer = () => {
             <a href="mailto:info@tinpet.com" className="block text-sm hover:underline hover:text-yellow-500">
               email@email.com
             </a>
-            <p className="text-sm mb-4">(123) 456-7890</p>
+            <p className="text-sm mb-4">+32 470 61 20 53</p>
 
             <h3 className="text-white text-lg font-bold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
