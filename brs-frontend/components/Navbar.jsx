@@ -28,7 +28,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 hover:opacity-90 transition-opacity">
             <Image
-              src="/logo.png"
+              src="/logo2.png"
               alt="Belgian Ride Services Logo"
               width={50}
               height={50}
