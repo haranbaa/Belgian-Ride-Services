@@ -7,20 +7,26 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { cn } from '@/lib/utils';
+import { format } from 'date-fns';
+import { CalendarIcon } from 'lucide-react';
 
 const BookingPage = () => {
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(undefined);
   const [time, setTime] = useState('');
-  const [isDelivery, setIsDelivery] = useState(false); // Toggle for Taxi and Delivery
+  const [isDelivery, setIsDelivery] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const formattedTime = `${time} ${
+      parseInt(time.split(':')[0], 10) >= 12 ? 'PM' : 'AM'
+    }`;
     if (isDelivery) {
-      alert('Your Delivery Request is Successful!');
+      alert(`Delivery scheduled at ${formattedTime}`);
     } else {
-      alert('Your Booking Is Successful!');
+      alert(`Booking scheduled at ${formattedTime}`);
     }
   };
 
@@ -37,8 +43,7 @@ const BookingPage = () => {
           objectFit="cover"
           className="opacity-80"
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-        </div>
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50" />
       </div>
 
       {/* Main Content */}
@@ -46,21 +51,27 @@ const BookingPage = () => {
         <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Toggle Section */}
-            <div className="flex justify-between">
+            <div className="flex rounded-lg overflow-hidden">
               <Button
                 type="button"
-                className={`w-1/2 py-3 rounded-l-lg ${
-                  !isDelivery ? 'bg-yellow-500 text-white' : 'bg-gray-200 text-gray-700'
-                }`}
+                variant={isDelivery ? 'outline' : 'default'}
+                className={cn(
+                  'w-1/2 py-3 rounded-none transition-colors',
+                  !isDelivery && 'bg-yellow-500 hover:bg-yellow-600 text-white',
+                  isDelivery && 'hover:bg-yellow-100'
+                )}
                 onClick={() => setIsDelivery(false)}
               >
                 Book a Taxi
               </Button>
               <Button
                 type="button"
-                className={`w-1/2 py-3 rounded-r-lg ${
-                  isDelivery ? 'bg-yellow-500 text-white' : 'bg-gray-200 text-gray-700'
-                }`}
+                variant={isDelivery ? 'default' : 'outline'}
+                className={cn(
+                  'w-1/2 py-3 rounded-none transition-colors',
+                  isDelivery && 'bg-yellow-500 hover:bg-yellow-600 text-white',
+                  !isDelivery && 'hover:bg-yellow-100'
+                )}
                 onClick={() => setIsDelivery(true)}
               >
                 Door-to-Door Delivery
@@ -91,13 +102,28 @@ const BookingPage = () => {
                 </div>
                 <div>
                   <Label htmlFor="date">Date</Label>
-                  <DatePicker
-                    selected={selectedDate}
-                    onChange={(date) => setSelectedDate(date)}
-                    className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
-                    placeholderText="Select a date"
-                    dateFormat="MMMM d, yyyy"
-                  />
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className={cn(
+                          'w-full justify-start text-left font-normal mt-1',
+                          !selectedDate && 'text-muted-foreground'
+                        )}
+                      >
+                        <CalendarIcon className="mr-2 h-4 w-4" />
+                        {selectedDate ? format(selectedDate, 'PPP') : <span>Pick a date</span>}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0">
+                      <Calendar
+                        mode="single"
+                        selected={selectedDate}
+                        onSelect={setSelectedDate}
+                        initialFocus
+                      />
+                    </PopoverContent>
+                  </Popover>
                 </div>
                 <div>
                   <Label htmlFor="time">Time</Label>
@@ -147,7 +173,7 @@ const BookingPage = () => {
               <Label htmlFor="note">{isDelivery ? 'Delivery Note' : 'Note for the Driver'}</Label>
               <textarea
                 id="note"
-                rows="3"
+                rows={3}
                 placeholder={
                   isDelivery
                     ? 'Enter specific delivery instructions (e.g., fragile item, leave at the door)'
