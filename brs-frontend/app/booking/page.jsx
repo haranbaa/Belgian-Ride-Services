@@ -12,7 +12,7 @@ import { DatePicker } from '@/components/DatePicker';
 const BookingPage = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [time, setTime] = useState('');
-  const [isDelivery, setIsDelivery] = useState(false); // Toggle between Taxi and Delivery
+  const [isDelivery, setIsDelivery] = useState(false); // Toggle for Taxi and Delivery
 
   const handleSubmit = (e) => {
     e.preventDefault();
