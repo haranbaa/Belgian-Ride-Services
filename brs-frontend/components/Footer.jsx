@@ -12,9 +12,7 @@ const Footer = () => {
             <p className="text-sm">
               Providing corporate travel solutions tailored to your needs. Reliable and luxurious transportation for executives and teams.
             </p>
-            <a href="/business-services" className="text-yellow-500 hover:text-yellow-600 text-sm mt-2 inline-block">
-              Learn more
-            </a>
+           
           </div>
 
           {/* Delivery Services Section */}
@@ -23,9 +21,6 @@ const Footer = () => {
             <p className="text-sm">
               Offering fast and eco-friendly parcel delivery across Belgium. Door-to-door service with transparent pricing.
             </p>
-            <a href="/delivery-services" className="text-yellow-500 hover:text-yellow-600 text-sm mt-2 inline-block">
-              Learn more
-            </a>
           </div>
 
           {/* Eco-Friendly Fleet Section */}
@@ -34,9 +29,6 @@ const Footer = () => {
             <p className="text-sm">
               Our fleet includes hybrid and fully electric vehicles, supporting a greener future while ensuring a luxurious ride.
             </p>
-            <a href="/eco-friendly-fleet" className="text-yellow-500 hover:text-yellow-600 text-sm mt-2 inline-block">
-              Learn more
-            </a>
           </div>
 
           {/* Contact & Social Media Section */}
