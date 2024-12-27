@@ -7,7 +7,8 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-import { DatePicker } from '@/components/DatePicker';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const BookingPage = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -90,7 +91,13 @@ const BookingPage = () => {
                 </div>
                 <div>
                   <Label htmlFor="date">Date</Label>
-                  <DatePicker selected={selectedDate} onChange={setSelectedDate} className="mt-1" />
+                  <DatePicker
+                    selected={selectedDate}
+                    onChange={(date) => setSelectedDate(date)}
+                    className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
+                    placeholderText="Select a date"
+                    dateFormat="MMMM d, yyyy"
+                  />
                 </div>
                 <div>
                   <Label htmlFor="time">Time</Label>
