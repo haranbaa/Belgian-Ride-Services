@@ -4,10 +4,26 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone } from "lucide-react";
 import { Button } from "./ui/button";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Handle navbar background on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="bg-black/90 w-full shadow-md">
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-black/95 shadow-lg" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center px-4 lg:px-8 py-4">
           {/* Logo */}
@@ -52,11 +68,15 @@ const Navbar = () => {
 
           {/* Contact Information */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="hover:bg-transparent" asChild>
+            <Button
+              variant="ghost"
+              className="hover:bg-transparent"
+              asChild
+            >
               <Link href="tel:0032470612053" className="flex items-center space-x-3">
-                <Phone className="h-10 w-10 text-yellow-500" />
+                <Phone className="h-6 w-6 text-yellow-400" />
                 <div className="flex flex-col items-start space-y-0">
-                  <span className="text-2xl font-bold leading-none text-yellow-400">
+                  <span className="text-lg font-semibold text-yellow-400">
                     +32 470 61 20 53
                   </span>
                 </div>
@@ -66,9 +86,14 @@ const Navbar = () => {
 
           {/* Mobile Contact Button */}
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" className="hover:bg-transparent" asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-yellow-400 hover:text-yellow-500 hover:bg-transparent"
+              asChild
+            >
               <Link href="tel:0032470612053">
-                <Phone className="h-10 w-10 text-yellow-500" />
+                <Phone className="h-6 w-6" />
               </Link>
             </Button>
           </div>
