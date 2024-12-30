@@ -1,7 +1,5 @@
 'use client';
 
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -43,7 +41,6 @@ const BookingPage = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col min-h-screen">
-        <Navbar />
 
         {/* Main Content */}
         <main className="flex-grow py-10 px-4" style={{ paddingTop: '100px' }}>
@@ -191,8 +188,6 @@ const BookingPage = () => {
             </form>
           </div>
         </main>
-
-        <Footer />
       </div>
     </div>
   );
