@@ -4,11 +4,11 @@ const AboutUs = () => {
 
     return (
         <>
-        <section id="about-us" className=" relative py-10 md:py-20 overflow-hidden">
+        <section id="about-us" className=" relative py-10 overflow-hidden bg-yellow-50">
             <div className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-7xl mx-auto px-5 md:px-10">
                 <div>
                     <h1 className="text-4xl md:text-5xl font-bold mb-5 text-gray-800">
-                        ABOUT US
+                        About <br/><span className="text-yellow-500">Belgian Ride Services</span>
                     </h1>
                     <p className="text-lg leading-relaxed text-gray-700 mb-5">
                         At <strong>Belgian Ride Services</strong>, we make transportation
@@ -30,7 +30,7 @@ const AboutUs = () => {
                     alt="Car on the way"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-lg"
+                    className="rounded-lg transition-transform duration-300 hover:scale-105"
                 />
                 </div>
             </div>

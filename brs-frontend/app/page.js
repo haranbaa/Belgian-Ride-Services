@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
 import FeaturesSection from "@/components/FeaturesSection";
 import BusinessSection from "@/components/BusinessSection";
-import EcoFriendlyFleet from "@/components/EcoFriendlyFleet";
+import EcoFriendlyFleetgit  from "@/components/EcoFriendlyFleet";
 import CourierServiceSection from "@/components/CourierServiceSection"; // Import the CourierServiceSection component
 
 export default function Home() {
@@ -18,7 +18,8 @@ export default function Home() {
         <FeaturesSection />
         <BusinessSection />
         <CourierServiceSection /> {/* Add the CourierServiceSection component */}
-        <EcoFriendlyFleet />
+        <EcoFriendlyFleetgit />
+        <AboutUs />
       </main>
       <Footer />
     </>
