@@ -8,19 +8,19 @@ const ContactAccordion = () => {
                     <AccordionTrigger>How can I book a ride?</AccordionTrigger>
                     <AccordionContent>Blablablabla.</AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-1">
+                <AccordionItem value="item-2">
                     <AccordionTrigger>What are your service areas?</AccordionTrigger>
                     <AccordionContent>Blablablabla.</AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-1">
+                <AccordionItem value="item-3">
                     <AccordionTrigger>What are your rates and payments options?</AccordionTrigger>
                     <AccordionContent>Blablablabla.</AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-1">
+                <AccordionItem value="item-4">
                     <AccordionTrigger>Do you offer airport pickup and drop-off services?</AccordionTrigger>
                     <AccordionContent>Blablablabla.</AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-1">
+                <AccordionItem value="item-5">
                     <AccordionTrigger>Are you available 24/7?</AccordionTrigger>
                     <AccordionContent>Blablablabla.</AccordionContent>
                 </AccordionItem>
