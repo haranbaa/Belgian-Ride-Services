@@ -284,7 +284,7 @@ const BookingPage = () => {
         </main>
       </div>
     </div>
-  </div>
+  
 );
 };
 
