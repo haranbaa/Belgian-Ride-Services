@@ -19,6 +19,7 @@ export default function Home() {
         <BusinessSection />
         <CourierServiceSection /> {/* Add the CourierServiceSection component */}
         <EcoFriendlyFleet />
+        <AboutUs />
       </main>
       <Footer />
     </>
