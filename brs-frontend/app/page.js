@@ -10,9 +10,6 @@ import CourierServiceSection from "@/components/CourierServiceSection"; // Impor
 export default function Home() {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
       <main>
         <Hero />
         <FeaturesSection />
@@ -21,7 +18,6 @@ export default function Home() {
         <EcoFriendlyFleetgit />
         <AboutUs />
       </main>
-      <Footer />
     </>
   );
 }

@@ -1,7 +1,5 @@
 'use client';
 
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -79,7 +77,6 @@ const BookingPage = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col min-h-screen">
-        <Navbar />
 
         {/* Main Content */}
         <main className="flex-grow py-10 px-4" style={{ paddingTop: '100px' }}>
@@ -278,15 +275,14 @@ const BookingPage = () => {
 
               {/* Submit Button */}
               <div className="text-center">
-              <Button type="submit" className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded">
-                {isDelivery ? 'Schedule Delivery' : 'Book Now'}
-              </Button>
-            </div>
-          </form>
-        </div>
-      </main>
-
-      <Footer />
+                <Button type="submit" className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded">
+                  {isDelivery ? 'Schedule Delivery' : 'Book Now'}
+                </Button>
+              </div>
+            </form>
+          </div>
+        </main>
+      </div>
     </div>
   </div>
 );
