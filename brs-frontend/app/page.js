@@ -1,6 +1,4 @@
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
 import FeaturesSection from "@/components/FeaturesSection";
 import BusinessSection from "@/components/BusinessSection";
