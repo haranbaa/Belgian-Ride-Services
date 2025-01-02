@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState, useEffect } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -74,7 +75,7 @@ const Navbar = () => {
               asChild
             >
               <Link href="https://wa.me/32470612053" className="flex items-center space-x-3">
-                <Phone className="h-6 w-6 text-yellow-400" />
+              <FaWhatsapp style={{ height: '30px', width: '30px', color: 'green' }} />
                 <div className="flex flex-col items-start space-y-0">
                   <span className="text-2xl font-semibold text-yellow-400">
                     +32 470 61 20 53
@@ -89,11 +90,11 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="text-yellow-400 hover:text-yellow-500 hover:bg-transparent"
+              className="text-green-500 hover:text-green-800 hover:bg-transparent"
               asChild
             >
                <Link href="https://wa.me/32470612053">
-                <Phone className="h-6 w-6" />
+               <FaWhatsapp style={{ height: '30px', width: '30px', color: 'green' }} />
               </Link>
             </Button>
           </div>
