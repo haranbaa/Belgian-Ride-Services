@@ -73,7 +73,7 @@ const Navbar = () => {
               className="hover:bg-transparent"
               asChild
             >
-              <Link href="tel:0032470612053" className="flex items-center space-x-3">
+              <Link href="https://wa.me/32470612053" className="flex items-center space-x-3">
                 <Phone className="h-6 w-6 text-yellow-400" />
                 <div className="flex flex-col items-start space-y-0">
                   <span className="text-2xl font-semibold text-yellow-400">
@@ -92,7 +92,7 @@ const Navbar = () => {
               className="text-yellow-400 hover:text-yellow-500 hover:bg-transparent"
               asChild
             >
-              <Link href="tel:0032470612053">
+               <Link href="https://wa.me/32470612053">
                 <Phone className="h-6 w-6" />
               </Link>
             </Button>
