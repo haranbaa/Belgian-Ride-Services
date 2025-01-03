@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed-navbar w-full z-50  bg-black shadow-lg">
+    <nav className="fixed-navbar w-full z-50 bg-black shadow-lg">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center px-4 lg:px-8 py-4">
           {/* Logo */}
@@ -79,8 +79,9 @@ const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Contact Button */}
-          <div className="md:hidden">
+          {/* Mobile Contact Button and Burger Menu Icon */}
+          <div className="md:hidden flex items-center space-x-4">
+            {/* Mobile Contact Button */}
             <Button
               variant="ghost"
               size="icon"
@@ -91,19 +92,17 @@ const Navbar = () => {
                 <FaWhatsapp style={{ height: '30px', width: '30px', color: 'green' }} />
               </Link>
             </Button>
-          </div>
 
-          {/* Burger Menu Icon */}
-          <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-3xl text-white">
+            {/* Burger Menu Icon */}
+            <button onClick={toggleMenu} className="text-3xl text-white focus:outline-none">
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
         </div>
 
-        {/* Dropdown Menu */}
+        {/* Dropdown Menu for Mobile */}
         {isOpen && (
-          <div className="md:hidden absolute top-16 right-0 bg-black w-full shadow-lg">
+          <div className="md:hidden bg-black w-full">
             <ul className="flex flex-col items-center space-y-4 py-4">
               <li>
                 <Link href="/" onClick={closeMenu} className="text-white text-lg font-semibold hover:text-yellow-400">
