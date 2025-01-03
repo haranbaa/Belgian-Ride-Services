@@ -89,7 +89,7 @@ const BookingPage = () => {
                 variant={isDelivery ? 'ghost' : 'default'}
                 className={cn(
                   'w-1/2 py-3 rounded-none transition-colors',
-                  !isDelivery && 'bg-yellow-500 hover:bg-yellow-600 text-white',
+                  !isDelivery && 'bg-yellow-500 hover:bg-yellow-600 text-white text-xl',
                   isDelivery && 'hover:bg-yellow-100 text-yellow-700'
                 )}
                 onClick={() => setIsDelivery(false)}
@@ -101,7 +101,7 @@ const BookingPage = () => {
                 variant={isDelivery ? 'default' : 'ghost'}
                 className={cn(
                   'w-1/2 py-3 rounded-none transition-colors',
-                  isDelivery && 'bg-yellow-500 hover:bg-yellow-600 text-white',
+                  isDelivery && 'bg-yellow-500 hover:bg-yellow-600 text-white text-xl',
                   !isDelivery && 'hover:bg-yellow-100 text-yellow-700'
                 )}
                 onClick={() => setIsDelivery(true)}
@@ -112,26 +112,26 @@ const BookingPage = () => {
 
               {/* Shared Fields */}
               <div>
-              <Label htmlFor="name" className="text-gray-700">Name</Label>
+              <Label htmlFor="name" className="text-gray-700 font-semibold text-md">Name</Label>
               <Input
                 id="name"
                 type="text"
                 placeholder="Enter your name"
                 value={formValues.name}
                 onChange={handleChange}
-                className="mt-1"
+                className="mt-1 bg-gray-50"
               />
               {errors.name && <p className="text-red-500">{errors.name}</p>}
             </div>
             <div>
-              <Label htmlFor="email" className="text-gray-700">Email</Label>
+              <Label htmlFor="email" className="text-gray-700 font-semibold text-md">Email</Label>
               <Input
                 id="email"
                 type="email"
                 placeholder="Enter your email"
                 value={formValues.email}
                 onChange={handleChange}
-                className="mt-1"
+                className="mt-1 bg-gray-50"
               />
               {errors.email && <p className="text-red-500">{errors.email}</p>}
             </div>
@@ -141,31 +141,31 @@ const BookingPage = () => {
               <>
                 {/* Taxi Fields */}
                 <div>
-                  <Label htmlFor="pickup" className="text-gray-700">Pickup Location</Label>
+                  <Label htmlFor="pickup" className="text-gray-700 font-semibold text-md">Pickup Location</Label>
                   <Input
                     id="pickup"
                     type="text"
                     placeholder="Enter pickup location"
                     value={formValues.pickup}
                     onChange={handleChange}
-                    className="mt-1"
+                    className="mt-1 bg-gray-50"
                   />
                   {errors.pickup && <p className="text-red-500">{errors.pickup}</p>}
                 </div>
                 <div>
-                  <Label htmlFor="destination" className="text-gray-700">Destination</Label>
+                  <Label htmlFor="destination" className="text-gray-700 font-semibold text-md">Destination</Label>
                   <Input
                     id="destination"
                     type="text"
                     placeholder="Enter destination"
                     value={formValues.destination}
                     onChange={handleChange}
-                    className="mt-1"
+                    className="mt-1 bg-gray-50"
                   />
                   {errors.destination && <p className="text-red-500">{errors.destination}</p>}
                 </div>
                 <div>
-                  <Label htmlFor="date" className="text-gray-700">Date</Label>
+                  <Label htmlFor="date" className="text-gray-700 font-semibold text-md">Date</Label>
                   <Popover>
                     <PopoverTrigger asChild>
                       <Button
@@ -191,13 +191,13 @@ const BookingPage = () => {
                   {errors.date && <p className="text-red-500">{errors.date}</p>}
                 </div>
                 <div>
-                  <Label htmlFor="time" className="text-gray-700">Time</Label>
+                  <Label htmlFor="time" className="text-gray-700 font-semibold text-md">Time</Label>
                   <Input
                     id="time"
                     type="time"
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
-                    className="mt-1"
+                    className="mt-1 bg-gray-50"
                   />
                   {errors.time && <p className="text-red-500">{errors.time}</p>}
                 </div>
@@ -206,38 +206,38 @@ const BookingPage = () => {
               <>
                   {/* Delivery Fields */}
                   <div>
-                  <Label htmlFor="item" className="text-gray-700">Item Description</Label>
+                  <Label htmlFor="item" className="text-gray-700 font-semibold text-md">Item Description</Label>
                   <Input
                     id="item"
                     type="text"
                     placeholder="Describe the item"
                     value={formValues.item}
                     onChange={handleChange}
-                    className="mt-1"
+                    className="mt-1 bg-gray-50"
                   />
                   {errors.item && <p className="text-red-500">{errors.item}</p>}
                 </div>
                 <div>
-                  <Label htmlFor="pickup" className="text-gray-700">Pickup Location</Label>
+                  <Label htmlFor="pickup" className="text-gray-700 font-semibold text-md">Pickup Location</Label>
                   <Input
                     id="pickup"
                     type="text"
                     placeholder="Enter pickup location"
                     value={formValues.pickup}
                     onChange={handleChange}
-                    className="mt-1"
+                    className="mt-1 bg-gray-50"
                   />
                   {errors.pickup && <p className="text-red-500">{errors.pickup}</p>}
                 </div>
                 <div>
-                  <Label htmlFor="dropoff" className="text-gray-700">Dropoff Location</Label>
+                  <Label htmlFor="dropoff" className="text-gray-700 font-semibold text-md">Dropoff Location</Label>
                   <Input
                     id="dropoff"
                     type="text"
                     placeholder="Enter dropoff location"
                     value={formValues.dropoff}
                     onChange={handleChange}
-                    className="mt-1"
+                    className="mt-1 bg-gray-50"
                   />
                   {errors.dropoff && <p className="text-red-500">{errors.dropoff}</p>}
                 </div>
@@ -246,11 +246,12 @@ const BookingPage = () => {
 
               {/* Payment Section */}
               <div>
-              <Label htmlFor="payment" className="text-gray-700">Payment Type</Label>
+              <Label htmlFor="payment" className="text-gray-700 font-semibold text-md">Payment Type</Label>
               <select
                 id="payment"
                 className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 bg-white"
               >
+                <option value="">Select Payment Type</option>
                 <option value="cash">Cash</option>
                 <option value="apple_pay">Apple Pay</option>
                 <option value="payconiq">Payconiq</option>
@@ -260,7 +261,7 @@ const BookingPage = () => {
 
               {/* Notes Section */}
               <div>
-              <Label htmlFor="note" className="text-gray-700">{isDelivery ? 'Delivery Note' : 'Note for the Driver'}</Label>
+              <Label htmlFor="note" className="text-gray-700 font-semibold text-md">{isDelivery ? 'Delivery Note' : 'Note for the Driver'}</Label>
               <textarea
                 id="note"
                 rows={3}
@@ -269,13 +270,13 @@ const BookingPage = () => {
                     ? 'Enter specific delivery instructions (e.g., fragile item, leave at the door)'
                     : 'Enter a note for the driver (e.g., specific instructions)'
                 }
-                className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 bg-white"
+                className="mt-1 w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 bg-gray-50"
               />
             </div>
 
               {/* Submit Button */}
               <div className="text-center">
-                <Button type="submit" className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded">
+                <Button type="submit" className="bg-yellow-500 hover:bg-yellow-600 text-white text-xl py-2 px-4 rounded">
                   {isDelivery ? 'Schedule Delivery' : 'Book Now'}
                 </Button>
               </div>
