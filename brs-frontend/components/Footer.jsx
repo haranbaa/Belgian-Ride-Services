@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Contact & Social Media Section */}
           <div className="text-center">
             <h3 className="text-white text-lg font-bold mb-4">Contact Us</h3>
-            <p className="text-sm">Gent, Belgium</p>
+            <p className="text-sm">Metselaarsstraat 1, bus 201, 9000 Gent</p>
             <a href="mailto:info@tinpet.com" className="block text-sm hover:underline hover:text-yellow-500">
               example@email.com
             </a>
