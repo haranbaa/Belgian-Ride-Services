@@ -62,7 +62,7 @@ const Navbar = () => {
               BOOK A RIDE
             </Link>
             <Link
-              href="/#about-us"
+              href="/about-us"
               className="text-white text-lg font-semibold tracking-wider hover:text-yellow-400 transition-colors hover:underline"
             >
               ABOUT
