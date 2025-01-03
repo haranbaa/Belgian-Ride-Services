@@ -41,22 +41,6 @@ const Footer = () => {
             <a href="https://wa.me/32470612053" target="_blank" rel="noopener noreferrer" className="block text-sm hover:underline hover:text-yellow-500 mt-2">
               +32 470 61 20 53
             </a>
-
-            <h3 className="text-white text-lg font-bold mb-4 mt-2">Follow Us</h3>
-            <div className="flex justify-center space-x-4">
-              <a href="https://www.facebook.com/becode.org/" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="h-4 w-4 text-blue-600 hover:text-yellow-500" />
-              </a>
-              <a href="https://x.com/becodeorg" target="_blank" rel="noopener noreferrer">
-                <FaXTwitter className="h-4 w-4 text-blue-400 hover:text-yellow-500" />
-              </a>
-              <a href="https://www.instagram.com/becodeorg/" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="h-4 w-4 text-pink-500 hover:text-yellow-500" />
-              </a>
-              <a href="https://www.linkedin.com/company/becode.org/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="h-4 w-4 text-blue-700 hover:text-yellow-500" />
-              </a>
-            </div>
           </div>
         </div>
 
