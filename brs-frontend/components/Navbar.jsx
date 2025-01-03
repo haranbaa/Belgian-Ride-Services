@@ -3,11 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,21 +17,8 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  // Handle navbar background on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black/95 shadow-lg" : "bg-transparent"
-      }`}
-    >
+    <nav className="fixed-navbar w-full z-50  bg-black shadow-lg">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center px-4 lg:px-8 py-4">
           {/* Logo */}
@@ -117,7 +103,7 @@ const Navbar = () => {
 
         {/* Dropdown Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-16 right-0 bg-black/95 w-full shadow-lg">
+          <div className="md:hidden absolute top-16 right-0 bg-black w-full shadow-lg">
             <ul className="flex flex-col items-center space-y-4 py-4">
               <li>
                 <Link href="/" onClick={closeMenu} className="text-white text-lg font-semibold hover:text-yellow-400">
@@ -130,7 +116,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/#about-us" onClick={closeMenu} className="text-white text-lg font-semibold hover:text-yellow-400">
+                <Link href="/about-us" onClick={closeMenu} className="text-white text-lg font-semibold hover:text-yellow-400">
                   ABOUT
                 </Link>
               </li>

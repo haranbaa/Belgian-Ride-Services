@@ -35,9 +35,9 @@ const AboutUs = () => {
                 />
                 </div>
             </div>
-            <div className="mx-20 mt-10">
-                <h1 className="text-4xl md:text-5xl font-bold mb-5 text-gray-800 text-end">Our Mission</h1>
-                <p className="text-lg leading-relaxed text-gray-700 mb-5">
+            <div className="mx-20 mt-10 text-center">
+                <h1 className="text-4xl md:text-5xl font-bold mb-5 text-gray-800">Our Mission</h1>
+                <p className="text-lg leading-relaxed text-gray-700 mb-5 mx-auto max-w-2xl  text-left md:text-justify">
                 At Belgian Ride Services Ltd, our mission is to redefine personal transportation by providing safe, reliable, and luxurious taxi services that respect cultural diversity, promote environmental sustainability, and prioritize customer satisfaction. We are committed to delivering exceptional experiences through our cutting-edge fleet of hybrid and electric vehicles, ensuring the utmost safety and security for our passengers while adhering to Belgian legal and insurance standards.
                 </p>
             </div>
