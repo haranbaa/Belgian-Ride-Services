@@ -68,7 +68,7 @@ const Navbar = () => {
               className="hover:bg-transparent"
               asChild
             >
-              <Link href="https://wa.me/32470612053" className="flex items-center space-x-3">
+              <Link href="https://wa.me/32470612053" className="flex items-center space-x-3" aria-label="Contact us on WhatsApp at +32 470 61 20 53">
                 <FaWhatsapp style={{ height: '30px', width: '30px', color: 'green' }} />
                 <div className="flex flex-col items-start space-y-0">
                   <span className="text-2xl font-semibold text-yellow-400">
@@ -78,7 +78,6 @@ const Navbar = () => {
               </Link>
             </Button>
           </div>
-
           {/* Mobile Contact Button and Burger Menu Icon */}
           <div className="md:hidden flex items-center space-x-4">
             {/* Mobile Contact Button */}
