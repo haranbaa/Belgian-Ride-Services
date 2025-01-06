@@ -107,7 +107,7 @@ const ContactForm = ({ className }) => {
           <div className="flex justify-center mt-5">
             <Button
               type="submit"
-              className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+              className="bg-yellow-500 hover:bg-yellow-600 text-white text-xl font-bold py-2 px-6 rounded-lg shadow-xl transition-transform transform hover:scale-105"
             >
               Submit
             </Button>
