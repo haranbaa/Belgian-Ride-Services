@@ -33,7 +33,7 @@ const Footer = () => {
           <div className="text-center">
             <h3 className="text-white text-lg font-bold mb-4">Contact Us</h3>
             <p className="text-sm">Metselaarsstraat 1, bus 201, 9000 Gent</p>
-            <a href="mailto:info@tinpet.com" className="block text-sm hover:underline hover:text-yellow-500">
+            <a href="mailto:belgianrideservices@gmail.com" className="block text-sm hover:underline hover:text-yellow-500">
             belgianrideservices@gmail.com
             </a>
             <a href="https://wa.me/32470612053" target="_blank" rel="noopener noreferrer" className="block text-sm hover:underline hover:text-yellow-500 mt-2">
