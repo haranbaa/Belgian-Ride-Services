@@ -4,17 +4,9 @@ const AboutUs = () => {
 
     return (
         <>
-        {/* <div>
-        <Image
-            src="/aboutus.jpg"
-            alt="About us picture"
-            height={300}
-            width={}
-            />
-        </div> */}
             <div className="relative grid grid-cols-1 md:grid-cols-2 items-center gap-10 max-w-7xl mx-auto px-5 md:px-10" style={{ paddingTop: '100px' }}>
                 <div>
-                    <h1 className="text-4xl md:text-5xl font-bold mb-5 text-gray-800 hover:text-yellow-700 bg-yellow-300 bg-opacity-50 p-1 px-4 rounded-lg inline-block">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-5 text-gray-800 p-1 px-4 rounded-lg inline-block transform transition-all duration-300 hover:scale-105 hover:text-yellow-500">
                         About <br/><span className="text-yellow-500">Belgian Ride Services</span>
                     </h1>
                     <p className="text-lg leading-relaxed text-gray-700 mb-5">
@@ -31,13 +23,13 @@ const AboutUs = () => {
                     alt="Car on the way"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-lg transition-transform duration-300 hover:scale-105 shadow-2xl shadow-yellow-500"
+                    className="rounded-lg transition-transform duration-300 hover:scale-105 shadow-2xl hover:shadow-yellow-500"
                 />
                 </div>
             </div>
-            <div className="mx-20 mt-20 text-center">
-                <h1 className="text-4xl md:text-5xl font-bold mb-5 text-gray-800 hover:text-yellow-700 bg-yellow-500 bg-opacity-50 p-1 px-4 rounded-lg inline-block">Our Mission</h1>
-                <p className="text-lg leading-relaxed text-gray-700 mb-20 mx-auto max-w-2xl  text-left md:text-justify">
+            <div className="mt-20 text-center">
+                <h1 className="text-4xl md:text-5xl font-bold mb-5 text-gray-800 p-1 px-4 rounded-lg inline-block transform transition-all duration-300 hover:scale-105 hover:text-yellow-500">Our <span className="text-yellow-500">Mission</span></h1>
+                <p className="text-lg leading-relaxed text-gray-700 pb-10 mx-auto max-w-2xl">
                 At Belgian Ride Services Ltd, our mission is to redefine personal transportation by providing safe, reliable, and luxurious taxi services that respect cultural diversity, promote environmental sustainability, and prioritize customer satisfaction. We are committed to delivering exceptional experiences through our cutting-edge fleet of hybrid and electric vehicles, ensuring the utmost safety and security for our passengers while adhering to Belgian legal and insurance standards.
                 </p>
             </div>

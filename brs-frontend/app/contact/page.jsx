@@ -2,6 +2,7 @@ import ContactAccordion from "@/components/ContactAccordion";
 import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
 import ContactIntro from "@/components/ContactIntro";
+import ContactFeatures from "@/components/ContactFeatures";
 
 const Contact = () => {
     return (
@@ -21,8 +22,11 @@ const Contact = () => {
                     <div className="text-center text-white mb-12">
                         <h1 className="text-6xl font-bold drop-shadow-lg text-yellow-400">CONTACT US</h1>
                     </div>
+                    
                     <ContactIntro /> {/* ContactIntro is directly under the title */}
-                    <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10">
+                    <ContactFeatures/>
+                    
+                    <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 mb">
                         <div className="w-full md:w-1/2 flex">
                             <ContactAccordion className="flex-grow" /> {/* ContactAccordion on the left */}
                         </div>
@@ -30,6 +34,7 @@ const Contact = () => {
                             <ContactForm className="flex-grow" /> {/* ContactForm on the right */}
                         </div>
                     </div>
+                
                 </main>
             </div>
         </>
