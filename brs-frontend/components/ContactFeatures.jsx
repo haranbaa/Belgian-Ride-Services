@@ -11,7 +11,7 @@ const features = [
     },
     {
       icon: Mail,
-      title: 'info@belgian-ride-services.com',
+      title: 'belgianrideservices@gmail.com',
     },
     {
       icon: Clock,
