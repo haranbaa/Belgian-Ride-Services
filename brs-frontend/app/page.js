@@ -11,7 +11,7 @@ export default function Home() {
         <Hero />
         <FeaturesSection />
         <BusinessSection />
-        <CourierServiceSection /> {/* Add the CourierServiceSection component */}
+        <CourierServiceSection />
         <EcoFriendlyFleetgit />
       </main>
     </>

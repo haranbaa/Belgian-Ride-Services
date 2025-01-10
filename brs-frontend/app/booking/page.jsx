@@ -72,7 +72,6 @@ const BookingPage = () => {
             time: time,
           };
 
-      // Send email using EmailJS
       emailjs
         .send(
           "service_0unv8y6", 
@@ -83,7 +82,7 @@ const BookingPage = () => {
         .then(
           (result) => {
             console.log("Email sent successfully:", result.text);
-            alert(isDelivery ? "Your Delivery Request is Successful!" : "Your Booking is Successful!");
+            alert(isDelivery ? "Your delivery request has been sent, we will contact you soon!" : "Your trip has been is requested, we will contact you soon!");
           },
           (error) => {
             console.error("Failed to send email:", error.text);
@@ -97,7 +96,6 @@ const BookingPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col relative">
-      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/taxi.jpg"
@@ -109,14 +107,11 @@ const BookingPage = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col min-h-screen">
 
-        {/* Main Content */}
         <main className="flex-grow py-10 px-4" style={{ paddingTop: '100px' }}>
         <div className="max-w-4xl mx-auto bg-white/90 backdrop-blur-sm shadow-lg rounded-lg p-6">
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Toggle Section */}
             <div className="flex rounded-lg overflow-hidden border border-yellow-500">
               <Button
                 type="button"
@@ -144,7 +139,6 @@ const BookingPage = () => {
               </Button>
             </div>
 
-              {/* Shared Fields */}
               <div>
               <Label htmlFor="name" className="text-gray-700 font-semibold text-md">Name</Label>
               <Input
@@ -170,10 +164,8 @@ const BookingPage = () => {
               {errors.email && <p className="text-red-500">{errors.email}</p>}
             </div>
 
-              {/* Conditional Fields */}
               {!isDelivery ? (
               <>
-                {/* Taxi Fields */}
                 <div>
                   <Label htmlFor="pickup" className="text-gray-700 font-semibold text-md">Pickup Location</Label>
                   <Input
@@ -238,7 +230,6 @@ const BookingPage = () => {
               </>
             ) : (
               <>
-                  {/* Delivery Fields */}
                   <div>
                   <Label htmlFor="item" className="text-gray-700 font-semibold text-md">Item Description</Label>
                   <Input
@@ -278,7 +269,6 @@ const BookingPage = () => {
               </>
             )}
 
-              {/* Payment Section */}
               <div>
               <Label htmlFor="payment" className="text-gray-700 font-semibold text-md">Payment Type</Label>
               <select
@@ -293,7 +283,6 @@ const BookingPage = () => {
             </div>
 
 
-              {/* Notes Section */}
               <div>
               <Label htmlFor="note" className="text-gray-700 font-semibold text-md">{isDelivery ? 'Delivery Note' : 'Note for the Driver'}</Label>
               <textarea
@@ -308,7 +297,6 @@ const BookingPage = () => {
               />
             </div>
 
-              {/* Submit Button */}
               <div className="text-center">
                 <Button type="submit" className="bg-yellow-500 hover:bg-yellow-600 text-white text-xl py-2 px-4 rounded">
                   {isDelivery ? 'Schedule Delivery' : 'Book Now'}

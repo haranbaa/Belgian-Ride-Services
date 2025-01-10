@@ -27,7 +27,6 @@ const FeaturesSection = () => {
   return (
     <section className="py-24 bg-gradient-to-b from-white to-yellow-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading and Description */}
         <div className="max-w-4xl mx-auto text-center mb-20">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
             Why Choose <span className="text-yellow-500">Belgian Ride Services</span>?
@@ -38,7 +37,6 @@ const FeaturesSection = () => {
           </p>
         </div>
 
-        {/* Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16 mb-20">
           {features.map((feature, index) => (
             <div
@@ -58,7 +56,6 @@ const FeaturesSection = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className="text-center">
           <a
             href="/booking"

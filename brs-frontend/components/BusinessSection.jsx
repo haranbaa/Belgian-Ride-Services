@@ -13,7 +13,6 @@ const BusinessSection = () => {
     <section className="py-24 bg-yellow-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Text Content */}
           <div className="lg:w-1/2 space-y-8">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
               Taking care of <span className="text-yellow-500">business</span>
@@ -35,7 +34,6 @@ const BusinessSection = () => {
             </ul>
           </div>
 
-          {/* Image */}
           <div className="lg:w-1/2">
             <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
               <Image

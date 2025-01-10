@@ -23,15 +23,15 @@ const Contact = () => {
                         <h1 className="text-6xl font-bold drop-shadow-lg text-yellow-400">CONTACT US</h1>
                     </div>
                     
-                    <ContactIntro /> {/* ContactIntro is directly under the title */}
+                    <ContactIntro /> 
                     <ContactFeatures/>
                     
                     <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-10 mb">
                         <div className="w-full md:w-1/2 flex">
-                            <ContactAccordion className="flex-grow" /> {/* ContactAccordion on the left */}
+                            <ContactAccordion className="flex-grow" /> 
                         </div>
                         <div className="w-full md:w-1/2 flex">
-                            <ContactForm className="flex-grow" /> {/* ContactForm on the right */}
+                            <ContactForm className="flex-grow" />
                         </div>
                     </div>
                 

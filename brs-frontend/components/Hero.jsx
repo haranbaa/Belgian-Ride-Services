@@ -12,10 +12,8 @@ const Hero = () => {
         backgroundImage: `url('/Hero3.jpg')`,
       }}
     >
-      {/* Improved gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
 
-      {/* Main content */}
       <div className="relative z-10 text-center text-white p-6 translate-y-0 transition-all duration-700 ease-out">
         <div className="space-y-6 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight [text-shadow:_0_2px_4px_rgb(0_0_0_/_30%)]">
@@ -57,7 +55,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Bottom gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/50 to-transparent" />
     </section>
   );

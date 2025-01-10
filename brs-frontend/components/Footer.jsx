@@ -5,7 +5,6 @@ const Footer = () => {
     <footer className="bg-black py-10">
       <div className="container mx-auto text-gray-400">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Business Services Section */}
           <div className="text-center">
             <h3 className="text-white text-lg font-bold mb-4">Business Services</h3>
             <p className="text-sm">
@@ -13,7 +12,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Delivery Services Section */}
           <div className="text-center">
             <h3 className="text-white text-lg font-bold mb-4">Delivery Services</h3>
             <p className="text-sm">
@@ -21,7 +19,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Eco-Friendly Fleet Section */}
           <div className="text-center">
             <h3 className="text-white text-lg font-bold mb-4">Eco-Friendly Fleet</h3>
             <p className="text-sm">
@@ -29,7 +26,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Contact & Social Media Section */}
           <div className="text-center">
             <h3 className="text-white text-lg font-bold mb-4">Contact Us</h3>
             <p className="text-sm">Metselaarsstraat 1, bus 201, 9000 Gent</p>

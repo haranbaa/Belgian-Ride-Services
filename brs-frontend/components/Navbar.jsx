@@ -21,7 +21,6 @@ const Navbar = () => {
     <nav className="fixed-navbar w-full z-50 bg-black shadow-lg">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center px-4 lg:px-8 py-4">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 hover:opacity-90 transition-opacity">
             <Image
               src="/logo2.png"
@@ -33,7 +32,6 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* Navigation Links - Desktop */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
@@ -61,7 +59,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Contact Information */}
           <div className="hidden md:flex items-center space-x-4">
             <Button
               variant="ghost"
@@ -79,9 +76,7 @@ const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Contact Button and Burger Menu Icon */}
           <div className="md:hidden flex items-center space-x-4">
-            {/* Mobile Contact Button */}
             <Button
               variant="ghost"
               size="icon"
@@ -93,14 +88,12 @@ const Navbar = () => {
               </Link>
             </Button>
 
-            {/* Burger Menu Icon */}
             <button onClick={toggleMenu} className="text-3xl text-white focus:outline-none">
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
         </div>
 
-        {/* Dropdown Menu for Mobile */}
         {isOpen && (
           <div className="md:hidden bg-black w-full">
             <ul className="flex flex-col items-center space-y-4 py-4">

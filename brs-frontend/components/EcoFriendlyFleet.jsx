@@ -26,7 +26,6 @@ const EcoFriendlyFleet = () => {
   return (
     <section className="py-24 bg-yellow-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Heading and Description */}
         <div className="max-w-4xl mx-auto text-center mb-20">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
             Our <span className="text-yellow-500">Eco-Friendly</span> Fleet
@@ -38,7 +37,6 @@ const EcoFriendlyFleet = () => {
           </p>
         </div>
 
-        {/* Vehicle Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
           {vehicles.map((vehicle, index) => (
             <div
@@ -66,7 +64,6 @@ const EcoFriendlyFleet = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className="text-center"></div>
       </div>
     </section>

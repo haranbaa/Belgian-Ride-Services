@@ -6,7 +6,6 @@ const CourierServiceSection = () => {
     <section className="py-24 bg-yellow-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Image Section */}
           <div className="lg:w-1/2">
             <div className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
               <Image
@@ -20,7 +19,6 @@ const CourierServiceSection = () => {
             </div>
           </div>
 
-          {/* Text Content Section */}
           <div className="lg:w-1/2 space-y-8">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
               Door-to-Door <span className="text-yellow-500 underline decoration-4 decoration-yellow-300">Courier Service</span>
@@ -46,14 +44,12 @@ const CourierServiceSection = () => {
               ))}
             </ul>
 
-            {/* Note Section */}
             <div className="p-6 border-l-4 border-yellow-500 bg-yellow-100 rounded-lg shadow-md">
               <p className="text-lg font-semibold text-yellow-800">
                 📍 This service is primarily available within Gent. For deliveries outside Gent, please contact us first to confirm availability.
               </p>
             </div>
 
-            {/* Call-to-Action Button */}
             <a
               href="/booking"
               className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white bg-yellow-500 rounded-full shadow-lg hover:bg-yellow-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl group"
