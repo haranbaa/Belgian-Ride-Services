@@ -10,6 +10,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
 import { CalendarIcon } from 'lucide-react';
+import emailjs from "emailjs-com"; // Add this import
 
 const BookingPage = () => {
   const [selectedDate, setSelectedDate] = useState(undefined);
@@ -47,16 +48,49 @@ const BookingPage = () => {
       }
       return newErrors;
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const newErrors = validate();
     if (Object.keys(newErrors).length === 0) {
-        if (isDelivery) {
-          alert('Your Delivery Request is Successful!');
-        } else {
-          alert('Your Booking Is Successful!');
-        }
-    }else {
+      // Prepare data for EmailJS
+      const emailData = isDelivery
+        ? {
+            name: formValues.name,
+            email: formValues.email,
+            item: formValues.item,
+            pickup: formValues.pickup,
+            dropoff: formValues.dropoff,
+          }
+        : {
+            name: formValues.name,
+            email: formValues.email,
+            pickup: formValues.pickup,
+            destination: formValues.destination,
+            date: selectedDate ? format(selectedDate, "PPP") : "",
+            time: time,
+          };
+
+      // Send email using EmailJS
+      emailjs
+        .send(
+          "service_0unv8y6", 
+          isDelivery ? "template_qr8fgml" : "template_tth1hkg", 
+          emailData,
+          "YHQnPqRng7qbYSGb1" 
+        )
+        .then(
+          (result) => {
+            console.log("Email sent successfully:", result.text);
+            alert(isDelivery ? "Your Delivery Request is Successful!" : "Your Booking is Successful!");
+          },
+          (error) => {
+            console.error("Failed to send email:", error.text);
+            alert("Failed to send request. Please try again.");
+          }
+        );
+    } else {
       setErrors(newErrors);
     }
   };
@@ -284,7 +318,7 @@ const BookingPage = () => {
           </div>
         </main>
       </div>
-    </div>
+    </div> 
   
 );
 };
