@@ -33,7 +33,7 @@ const ContactForm = ({ className }) => {
     e.preventDefault();
     const newErrors = validate();
     if (Object.keys(newErrors).length === 0) {
-      alert("Form submitted!");
+      alert("Your message has been sent, we will contact you back soon.");
       console.log(formData);
     } else {
       setErrors(newErrors);
